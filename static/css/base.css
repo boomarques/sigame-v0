@@ -1,0 +1,320 @@
+/******************************************************************* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Mono:wght@400;700&family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@400;700&display=swap');
+/* 
+    font-family: 'Roboto Condensed', sans-serif;    
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Ubuntu', sans-serif;              
+    font-family: 'Ubuntu Mono', monospace;  
+    #006280  #19C9FF  < #009ACB >  #804000 #CC6600
+*/
+
+:root{
+  --font-1: 'Roboto Condensed', sans-serif;
+  --font-2: 'Roboto Mono', monospace;
+  --font-3: 'Ubuntu', sans-serif;
+  --font-4: 'Ubuntu Mono', monospace;
+  --color-guias-bg-page-active: #efe0d1;
+}
+
+
+/********************************************************************** BASE */
+.main_screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efe0d1;
+}
+
+.container {
+  width: 1500px;
+  height: 900px;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  justify-content: center;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: rgb(85, 82, 82);
+  margin: 0;
+  text-decoration: none;
+}
+
+.btn {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+}
+
+/*********************************************************************** NAV */
+.my-navbar {
+  width: 100%;
+  height: 80px;
+  background-color: #009ACB;
+  padding: 10px 20px;
+  background-image: url('../imgs/navbar_background.png');
+}
+
+.my-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.my-navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  text-decoration: none;
+}
+
+.my-navbar-links > a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.my-content {
+  display: grid;  
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 820px;
+  grid-template-areas: 'aside main';
+}
+
+.my-content-aside {
+  grid-area: aside;
+  background-color: #006280;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  gap: 10px;
+}
+
+.my-btn {
+  width: 100%;
+  border-radius: 5px;
+  height: 50px;
+  color: white;
+  background-color: rgb(21, 119, 211);
+  font-size: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.my-btn:hover {
+  /* background-color: #25b7cd; */
+  font-size: 1.5em;
+  
+  width: 90%;
+  
+}
+
+.my-content-main {
+  grid-area: main;
+  overflow: auto;
+  padding: 20px;
+}
+
+/********************************************************************* LOGIN */
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.sideL, .sideR {
+  width: 750px;
+  height: 900px;
+}
+
+.sideL > h1 {
+  color: white;
+}
+
+.sideL {
+  background-color: #009ACB;
+  background-image: url('../imgs/background1-750x950.png');
+  padding: 175px;
+}
+
+.sideR {
+  padding: 50px;
+}
+
+.sideR > h1, h2 {
+  color: #009ACB;
+}
+
+.sideR > h1 {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.login-form {
+  width: 350px;
+  color: white;
+  font-family: var(--font-2);
+  font-weight: 700;
+}
+
+/********************************************************************** HOME */
+.guias-head {
+  width: 100%;
+  height: 40px;
+  background-color: #bdf9fb;
+  display: flex;
+  align-items: center;
+  padding: 0px 5px;
+}
+
+.guias-content {
+  padding: 0px 5px;
+}
+
+.guias-line{
+  margin-top: 5px;
+  border-bottom: dotted 1px #3333;
+  display: flex;
+  align-items: center;
+}
+
+.guias-line > div{
+  /* border-right: dotted 1px #3333; */
+  padding-top: 5px;
+  height: 30px;
+}
+
+/********************************************************************* GUIAS */
+.guia-header {
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h3 {
+  text-align: end;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.guia-sec1, .guia-sec2 {
+  height: 45%;
+  padding-top: 15px;
+  /* border-bottom: dotted 0.5px rgb(207, 203, 203); */
+}
+
+.guia-sec-text-1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  padding-left: 5px;
+}
+
+.guia-sec-list-line {
+  display: flex;
+  align-items: center;
+  padding: 5px 5px;
+  border-bottom: dotted 0.5px #3333;
+}
+
+.guia-sec-list-line:hover {
+  background-color: white;
+}
+
+.text-mono-15px {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 17px;
+}
+
+/* PAGINATION */
+.paginatio-current {
+  font-size: 15px;
+}
+
+.step-links {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  /* background-color: #d6eefb; */
+  background-color: white;
+  padding: 5px 2px;
+}
+
+.fa-step-forward, .fa-step-backward {
+  font-size: 15px;
+  padding: 0px 7px;
+}
+
+.icon-disabled {
+  color: rgb(214, 210, 210);
+}
+
+.nav-tabs, .nav-link, .nav-tabs .nav-item.show .nav-link {
+  font-size: 18px;
+  font-family: 'Roboto Condensed', sans-serif;
+  height: 35px;
+  color: grey;
+}
+
+.nav-tabs .nav-link.active{
+  background: var(--color-guias-bg-page-active);
+  border-bottom: 1px solid var(--color-guias-bg-page-active);
+  font-weight: 700;
+} 
+
+/************************************************************ GUIAS DETALHES */
+
+.detalhe-page{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.guia-detalhe-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  background-color: var(--color-guias-bg-page-active);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.guia-detalhe-linha {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: dotted 1px gray;
+}
+
+.guia-detalhe-linha > h1 {
+  font-family: var(--font-3);
+  font-weight: 700;
+  font-size: 18px;
+  width: 30%;
+}
+
+.guia-detalhe-linha > p {
+  font-family: var(--font-3);
+  font-size: 18px;
+  text-align: right;
+  width: 70%;
+}
+
+.guia-detalhe-situacao-Utilzada {
+  color: blue;
+}
+
+
+/*****************************************************************************/
