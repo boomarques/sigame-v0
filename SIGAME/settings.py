@@ -7,7 +7,9 @@ SECRET_KEY = 'django-insecure-mh&j5fs_v+r*-(@3xam!o@khsl2z&ji0xttwxg(e4x)@@w$c*w
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'https://marques-sigame-v1.up.railway.app']
+ALLOWED_HOSTS = ['*']
+
+CSRF_TRUSTED_ORIGINS = ['https://marques-sigame-v1.up.railway.app']
 
 INSTALLED_APPS = [
   'django.contrib.admin',
